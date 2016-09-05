@@ -34,21 +34,8 @@
     <div class="header">
         <div class="container">
             <h1>
-                <img src="resources/finance.png" />
-                Wijmo StockPortfolio
+                Wijmo web application
             </h1>
-            <p>
-                This application was developed using TypeScript, Bootstrap, and
-                <a href="http://www.componentone.com">ComponentOne's Wijmo 5</a> controls.
-                The stock prices come from one of <a href="https://www.quandl.com/">Quandl's</a> free
-                financial databases.
-            </p>
-            <p>
-                This view uses a FlexGrid to display the portfolio items.
-                <a href="default.htm">
-                    Click here to switch to a view that shows the items in a standard HTML table.
-                </a>
-            </p>
         </div>
     </div>
 
@@ -88,38 +75,10 @@
                     </a>
                 </wj-flex-grid-column>
             </wj-flex-grid>
-
-            <div class="panel-footer">
-                <b>Add to portfolio:</b>
-                <wj-auto-complete items-source-function="searchCompany"
-                                  display-member-path="symbolName"
-                                  selected-value-path="symbol"
-                                  selected-value="portfolio.newItemSymbol"
-                                  show-drop-down-button="false"
-                                  placeholder="company name or symbol"
-                                  css-match="match">
-                </wj-auto-complete>
-                <button type="button" class="btn btn-primary"
-                        ng-click="portfolio.addNewItem()"
-                        ng-disabled="!portfolio.canAddNewItem()">
-                    <span class="glyphicon glyphicon-plus"></span>
-                </button>
-            </div>
         </div>
 
         <!-- chart -->
         <div class="panel panel-default">
-            <div class="panel-heading">
-                Chart
-                <div class="btn-group btn-group-xs pull-right">
-                    <button type="button" class="btn btn-default" ng-click="portfolio.chartPeriod=0" ng-class="{active: portfolio.chartPeriod == 0}">YTD</button>
-                    <button type="button" class="btn btn-default" ng-click="portfolio.chartPeriod=1" ng-class="{active: portfolio.chartPeriod == 1}">6m</button>
-                    <button type="button" class="btn btn-default" ng-click="portfolio.chartPeriod=2" ng-class="{active: portfolio.chartPeriod == 2}">12m</button>
-                    <button type="button" class="btn btn-default" ng-click="portfolio.chartPeriod=3" ng-class="{active: portfolio.chartPeriod == 3}">24m</button>
-                    <button type="button" class="btn btn-default" ng-click="portfolio.chartPeriod=4" ng-class="{active: portfolio.chartPeriod == 4}">36m</button>
-                    <button type="button" class="btn btn-default" ng-click="portfolio.chartPeriod=5" ng-class="{active: portfolio.chartPeriod == 5}">All</button>
-                </div>
-            </div>
             <wj-flex-chart binding="change"
                            binding-x="date"
                            chart-type="Line"
