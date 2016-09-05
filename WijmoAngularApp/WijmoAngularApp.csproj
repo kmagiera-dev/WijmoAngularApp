@@ -61,6 +61,15 @@
     <Content Include="default.html" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\controllers\appCtrl.js" />
+    <Content Include="scripts\directives\appDctv.js" />
+    <Content Include="scripts\portfolio.js" />
+    <Content Include="scripts\vendor\wijmo.angular.min.js" />
+    <Content Include="scripts\vendor\wijmo.chart.min.js" />
+    <Content Include="scripts\vendor\wijmo.grid.min.js" />
+    <Content Include="scripts\vendor\wijmo.input.min.js" />
+    <Content Include="scripts\vendor\wijmo.min.js" />
+    <Content Include="styles\app.css" />
+    <Content Include="styles\vendor\wijmo.min.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
